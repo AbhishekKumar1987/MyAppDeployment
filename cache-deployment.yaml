@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cache-deployment
+  namespace: default  # Replace with your namespace if different
+  labels:
+    app: cache-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cache-deployment
+  template:
+    metadata:
+      labels:
+        app: cache-deployment
+    spec:
+      containers:
+      - name: cache-container
+        image: my-cache-image:latest  # Replace with your actual image
+        ports:
+        - containerPort: 6379
