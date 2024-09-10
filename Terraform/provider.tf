@@ -1,12 +1,13 @@
 terraform {
   required_providers {
-    kubernetes = {
-      source = "hashicorp/kubernetes"
-      version = "2.32.0"
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "4.1.0"
     }
   }
 }
 
-provider "kubernetes" {
-  # Configuration options
+provider "azurerm" {
+  features {}
+  subscription_id = ""   # Need to give subscription id which available under azure account.
 }
