@@ -9,5 +9,5 @@ terraform {
 
 provider "azurerm" {
   features {}
-  subscription_id = ""   # Need to give subscription id which available under azure account.
+  subscription_id = ""   # Need to give subscription id which is available under azure account.
 }
